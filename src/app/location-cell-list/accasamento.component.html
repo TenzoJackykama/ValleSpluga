@@ -1,0 +1,54 @@
+<div class="main-content">
+      <div class="dropdown-container">
+        <select name="chickenMenu" id="chickenMenu" (change)="onMenuChange($event)">
+         <option default>--Select Breed--</option> 
+          @for (animal of accasification.chickenType.keys(); track animal) { 
+            <option value="{{animal}}">{{animal}}</option>
+          }
+        </select>
+
+        <select name="whoreHouseMenu" id="whoreHouseMenu" (change)="onMenuChange($event)">
+            <option value="">-- Select Location --</option>
+            <option value="optionA">Option A</option>
+            <option value="optionB">Option B</option>
+            <option value="optionC">Option C</option>
+        </select>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-header">
+      Informazioni accasamento
+    </div>
+    <div class="card-body">
+      <table class="info-table">
+        <tr>
+          <td class="label">Complesso di accasamento:</td>
+          <td class="value">
+            <input type="text" [(ngModel)]="accasionLocation" name="accasionLocation" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Data accasamento:</td>
+          <td class="value">
+            <input type="string" [(ngModel)]="dateAccasion" name="dateAccasion" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Data fine ciclo:</td>
+          <td class="value">
+            <input type="string" [(ngModel)]="dateEndCycle" name="dateEndCycle" />
+          </td>
+        </tr>
+        <tr>
+          <td class="label">Tipo polletti:</td>
+          <td class="value">
+            <input type="text" [(ngModel)]="breedPolletti" name="breedPolletti" />
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="card-footer">
+      <button>Salva</button>
+    </div>
+  </div>

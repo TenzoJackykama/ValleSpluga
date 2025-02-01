@@ -1,0 +1,120 @@
+body {
+    font-family: sans-serif;
+  }
+  p,
+  ul {
+    border: 2px solid rebeccapurple;
+    padding: 0.2em;
+  }
+  
+  .block,
+  li {
+    border: 2px solid blue;
+    padding: 0.2em;
+  }
+  
+  ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .block {
+    display: block;
+  }
+
+ .dropdown-container {
+    display: flex;
+    gap: 10px; /* Spaziatura tra i menu a tendina */
+  }
+
+  select {
+    padding: 5px;
+    font-size: 16px;
+  }
+
+  .label-result {
+    border-color: gray;
+    border-width: 5px;
+    font-size: 16px;
+    min-width: 150px; /* Minimum width for dropdowns */
+    min-height: 35px; /* Minimum height for dropdowns */
+  }
+  
+  .main-content {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;  
+  }
+
+  .card {
+    max-width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+  }
+
+  /* Intestazione della card */
+  .card-header {
+    background-color: #6200ee; /* Colore primario Android */
+    color: white;
+    padding: 16px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Corpo della card */
+  .card-body {
+    padding: 16px;
+  }
+
+  /* Tabella per informazioni */
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .info-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .info-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .info-table td.label {
+    font-weight: bold;
+    color: #555;
+    text-align: left;
+  }
+
+  .info-table td.value {
+    text-align: right;
+    color: #333;
+  }
+
+  /* Stile del footer */
+  .card-footer {
+    text-align: center;
+    padding: 10px 16px;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+  }
+
+  .card-footer button {
+    padding: 10px 20px;
+    background-color: #6200ee;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .card-footer button:hover {
+    background-color: #3700b3; /* Tonalità più scura */
+  }

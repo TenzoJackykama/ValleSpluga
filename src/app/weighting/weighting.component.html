@@ -1,0 +1,29 @@
+<div class="form-container">
+    <div class="input-group">
+      <input id="codice" type="text" [(ngModel)]="codicePesata" (input)="generatePesataCode()" required />
+      <label for="codice">Codice Pesata</label>
+      <span class="hint">Inserisci il codice pesata</span>
+    </div>
+  
+    <div class="input-group">
+      <input id="numero" type="number" [(ngModel)]="numero" (input)="generateInputs()" required />
+      <label for="numero">Numero</label>
+      <span class="hint">Inserisci un numero</span>
+    </div>
+  
+    <div *ngFor="let i of inputArray; let idx = index" class="input-group">
+      <input [id]="'input-' + idx" type="text" 
+        [(ngModel)]="inputArray[idx]"
+        (ngModelChange)="validateInput(idx, inputArray[idx].toString())" />
+      <label [for]="'input-' + idx">Pesata {{ idx + 1 }}</label>
+    </div>
+
+      <!-- Bottone Submit disabilitato se non tutti gli input sono validi -->
+    <div class="submit-button">
+        <button 
+            [disabled]="!areAllInputsValid()" 
+            (click)="onSubmit()">Invia</button>
+    </div>
+
+  </div>
+  
